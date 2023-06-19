@@ -6,8 +6,8 @@ from streamlit import session_state
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import timedelta
-import 1_welcome_page
-import 2_pm_overview
+import welcome_page
+import pm_overview
 
 
 def init_connection():
