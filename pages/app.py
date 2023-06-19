@@ -6,6 +6,9 @@ from streamlit import session_state
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import timedelta
+import 1_welcome_page
+import 2_pm_overview
+
 
 def init_connection():
     return mysql.connector.connect(**st.secrets["mysql"])
@@ -19,7 +22,9 @@ def run_query(conn,query):
 def update():
     st.session_state.submitted = True
     
-
+def show():
+    # Page content goes here
+    st.write("This is the Welcome Page.")
 def main():
 
 
@@ -30,6 +35,15 @@ def main():
     if 'submitted' not in st.session_state:
         st.session_state.submitted = False
 
+
+    # Create sidebar navigation
+    selected_page = st.sidebar.selectbox("Navigation", ["Welcome Page", "PM Overview"])
+
+    # Display selected page based on user's choice
+    if selected_page == "Welcome Page":
+        1_welcome_page.show()
+    elif selected_page == "PM Overview":
+        2_pm_overview.show()
 
     # Define the sidebar form
     with st.sidebar.form("my_sidebar_form"):
