@@ -6,8 +6,7 @@ from streamlit import session_state
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import timedelta
-from welcome_page import show as welcome_page_show
-from pm_overview import show as pm_overview_show
+
 
 
 def init_connection():
@@ -36,14 +35,7 @@ def main():
         st.session_state.submitted = False
 
 
-    # Create sidebar navigation
-    selected_page = st.sidebar.selectbox("Navigation", ["Welcome Page", "PM Overview"])
-
-    # Display selected page based on user's choice
-    if selected_page == "Welcome Page":
-        welcome_page_show()
-    elif selected_page == "PM Overview":
-        pm_overview_show()
+    
 
     # Define the sidebar form
     with st.sidebar.form("my_sidebar_form"):
@@ -51,7 +43,8 @@ def main():
         startdate = st.date_input(
         "Give Start Date",
         datetime.date.today())
-
+        st.sidebar.success("Select a demo above.")
+        
 
 
 
