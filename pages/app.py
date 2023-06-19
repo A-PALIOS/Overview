@@ -41,9 +41,9 @@ def main():
 
     # Display selected page based on user's choice
     if selected_page == "Welcome Page":
-        1_welcome_page.show()
+        welcome_page.show()
     elif selected_page == "PM Overview":
-        2_pm_overview.show()
+        pm_overview.show()
 
     # Define the sidebar form
     with st.sidebar.form("my_sidebar_form"):
