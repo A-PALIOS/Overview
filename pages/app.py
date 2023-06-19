@@ -6,8 +6,8 @@ from streamlit import session_state
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import timedelta
-import welcome_page
-import pm_overview
+from welcome_page import show as welcome_page_show
+from pm_overview import show as pm_overview_show
 
 
 def init_connection():
@@ -41,9 +41,9 @@ def main():
 
     # Display selected page based on user's choice
     if selected_page == "Welcome Page":
-        welcome_page.show()
+        welcome_page_show()
     elif selected_page == "PM Overview":
-        pm_overview.show()
+        pm_overview_show()
 
     # Define the sidebar form
     with st.sidebar.form("my_sidebar_form"):
