@@ -7,7 +7,7 @@ def main():
 
     st.set_page_config(
     page_title="users23",
-    page_icon="👋",
+    page_icon="👋"
     )
 
     st.write("# Welcome to CMT Project Management Dashboard! 👋")
