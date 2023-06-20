@@ -2,17 +2,14 @@ import streamlit as st
 
 
 
-def main():
-    st.write("## date2222 range Form")
 
-    st.set_page_config(
-    page_title="users23",
-    page_icon="👋"
-    )
+st.write("## date2222 range Form")
 
-    st.write("# Welcome to CMT Project Management Dashboard! 👋")
+st.set_page_config(
+page_title="users23",
+page_icon="👋"
+)
 
-    st.sidebar.success("Select a demo above.")
+st.write("# Welcome to CMT Project Management Dashboard! 👋")
 
-if __name__ == '__main__':
-    main()
+st.sidebar.success("Select a demo above.")
